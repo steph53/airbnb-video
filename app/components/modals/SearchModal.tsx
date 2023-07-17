@@ -83,6 +83,8 @@ const SearchModal = () => {
 
         router.push(url);
     },[
+        STEPS.LOCATION,
+        STEPS.INFO,
         step,
         searchModal,
         location,
@@ -100,7 +102,7 @@ const SearchModal = () => {
             return 'Search';
         }
         return "Next";
-    },[step])
+    },[step, STEPS.INFO])
 
     const secondaryActionLabel = useMemo(() => {
         if(step == STEPS.LOCATION){
@@ -108,7 +110,7 @@ const SearchModal = () => {
         }
 
         return "Back"
-    },[step])
+    },[step, STEPS.LOCATION])
 
     let bodyContent = (
         <div
