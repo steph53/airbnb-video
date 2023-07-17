@@ -82,7 +82,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
                     "
                 >
                     <Image
-                        fill
+                        layout="fill"
                         alt="Listing"
                         src={data.imageSrc}
                         className="
